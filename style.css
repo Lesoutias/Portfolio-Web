@@ -1,4 +1,11 @@
-* {
+:root {
+    --primary-color: rgb(20, 157, 221);
+    --secondary-color: rgb(4, 11, 20); 
+    --default-font: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a default font */
+    --secondary-font: Raleway, sans-serif; 
+}* 
+
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -335,17 +342,18 @@ section ul {
 }
 
 .about-content img {
-  width: clamp(12.5rem, 30vw, 18.75rem);
-  border-radius: 0px;
+  width: clamp(32.5rem, 30vw, 18.75rem);
+  border-radius: 10px;
 }
 
 .about-text {
   max-width: 63%;
   flex: 1;
+  padding: clamp(0.5rem, 2vw);
 }
 
 .about h2 {
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .services p {
@@ -410,6 +418,7 @@ section ul {
   display: flex;
   align-items: flex-start;
   gap: 1em;
+  margin-top: 50px;
 }
 
 .stat-item i {
@@ -1051,6 +1060,44 @@ textarea:focus {
     margin: 0px 0px 25px  0px;
   }
   }
+
+  .statistique {
+    display: flex; 
+    justify-content: left; 
+    height: auto; 
+    gap:20px; 
+    font-family: var(--default-font);  
+    width: auto;
+}
+
+.statistique .stat-container {
+    width: 30%; 
+    height: 100%; 
+    display: flex; 
+    margin: 0 30px; 
+}
+
+.statistique .stat-container i {
+    font-size: 40px; 
+    color: var(--primary-color); 
+    margin: 20px; 
+    font-weight: 700; 
+}  
+
+.stat-container h2{
+    font-size: 50px; 
+    color: var(--secondary-color); 
+    margin: 13px 0 0 0;
+}
+
+.stat-container span{
+    font-size: 14px; 
+    color: (srgb 1 1 1 / 0.15); 
+    display: block; 
+    margin: 10px 0 0 0; 
+    font-family: var(--default-font); 
+    font-weight: 100; 
+}
 
 
   @media(max-width: 540px) {
