@@ -907,7 +907,7 @@ textarea:focus {
     gap: 5px;
     grid-template-columns: repeat(3, 1fr);
   }
-  .stats-grid{
+  .statistique{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
@@ -1062,12 +1062,13 @@ textarea:focus {
   }
 
   .statistique {
-    display: flex; 
-    justify-content: left; 
-    height: auto; 
-    gap:20px; 
-    font-family: var(--default-font);  
-    width: auto;
+    display: grid; 
+    margin-top: clamp(2rem, 5vw, 4rem);
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    grid-template-columns: repeat(4, minmax(12.5rem, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: clamp(0.5rem, 3vw, 1.5rem);
+    background-color: #ffffff;
 }
 
 .statistique .stat-container {
@@ -1100,17 +1101,18 @@ textarea:focus {
 }
 
 
-  @media(max-width: 540px) {
-  .stats-grid{
+  @media(max-width: 700px) {
+  .statistique{
     position: relative;
     left: 8px;
   }
-  .grid-container{
+  .statistique{
     grid-template-columns: repeat(2, 1fr);
   }
+
   }
    @media(max-width: 540px) {
-    .stats-grid{
+    .statistique{
     grid-template-columns: repeat(1, 1fr);
     left: 40px;
   }
@@ -1122,7 +1124,7 @@ textarea:focus {
    }
 
    @media(max-width: 540px){
-    .stats-grid{
+    .statistique{
     left: 0px;
    }
    .cv-container{
